@@ -1,0 +1,89 @@
+/* Sidebar */
+
+.sidebar {
+  background-color: #0891b2;
+}
+
+.dashboard-icon img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.dashboard-body-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.dashboard-footer-icon img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+img {
+  filter: invert(94%) sepia(6%) saturate(24%) hue-rotate(265deg) brightness(106%) contrast(105%);
+}
+
+/* Header */
+
+.notification-icon img{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  filter: invert(0%) sepia(5%) saturate(1620%) hue-rotate(150deg) brightness(98%) contrast(103%);
+}
+
+.avatar-attribution {
+
+  color: black;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.user-avatar svg {
+  width: 50px;
+  height: 50px;
+  border-radius: 10%;
+  margin-right: 10px;
+  /* filter: invert(92%) sepia(28%) saturate(3478%) hue-rotate(3deg) brightness(98%) contrast(116%); */
+}
+
+
+.user-avatar-header svg {
+  width: 75px;
+  height: 75px;
+  border-radius: 10%;
+  margin-right: 10px;
+  /* filter: invert(92%) sepia(28%) saturate(3478%) hue-rotate(3deg) brightness(98%) contrast(116%); */
+}
+
+.trending-icon svg {
+  width: 35px;
+  height: 35px;
+  border-radius: 10%;
+  margin-right: 10px;
+}
+
+.favourite img {
+  width: 20px;
+  height: 20px;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%)
+}
+
+.views img {
+  width: 20px;
+  height: 20px;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%)
+}
+
+.shares img {
+  width: 20px;
+  height: 20px;
+  rotate: 270deg;
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%)
+}
+
+
