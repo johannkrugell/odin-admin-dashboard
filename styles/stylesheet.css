@@ -1,3 +1,53 @@
+/* Remove Default Styles */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* body */
  body{
   margin: 0;
@@ -19,23 +69,82 @@
 /* Header */
 .header {
   border: 1px solid #000;
+  box-shadow: 0px 5px rgb(128,128,128);
   background-color: #fff;
+  height: fit-content;
   grid-column: 2 / 4;
   grid-row: 1 / 2;
 }
 
-.notification-icon img{
+.header-search-row {
+  border: 1px solid #000;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0 5px 8px;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.header-action-row {
+  border: 1px solid #000;
+  display: grid;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 0 5px 8px;
+  grid-template-columns: 3fr 2fr ;
+  grid-template-rows: 1fr;
+}
+
+.search-bar {
+  border: 1px solid #000;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: minmax(25px,1fr) 5fr;
+  grid-column: 1 / 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  border: 1px solid #000;
+  padding-left: 75px;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+}
+
+.search-icon img {
   filter: invert(0%) sepia(5%) saturate(1620%) hue-rotate(150deg) brightness(98%) contrast(103%);
 }
 
-.avatar-attribution {
-  color: black;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 10px;
+.search-bar input {
+  border: 1px solid  	rgb(128,128,128);
+  border-radius: 10px;
+  background-color:  	rgb(220,220,220);
+  font-size: 15px;
+  font-weight: 600;
+  height: 22px;
+  letter-spacing: -1px;
+}
+
+.user-profile {
+  border: 1px solid #000;
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  grid-template-columns: 0.5fr 0.5fr 3fr;
+  grid-column: 3 / 5;
+}
+
+.notification-icon {
+  border: 1px solid #000;
+  padding-left: 45px;
+  width: 20px;
+  height: 20px;
+}
+
+.notification-icon img{
+  filter: invert(0%) sepia(5%) saturate(1620%) hue-rotate(150deg) brightness(98%) contrast(103%);
 }
 
 .user-avatar svg {
@@ -45,13 +154,72 @@
   margin-right: 10px;
 }
 
-.user-avatar-header svg {
-  width: 75px;
-  height: 75px;
-  border-radius: 10%;
+/* Header User Greeting Section */
+.user-header {
+  border: 1px solid #000;
+  display: grid;
+  align-items: center;
+  justify-content: right;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-column: 1 / 2;
+}
+
+.user-avatar-header {
+  width: 55px;
+  height: 55px;
+  background-color: #fcd34d;
+  margin-left: 45px;
+  border-radius: 50px;
   margin-right: 10px;
 }
 
+.callout {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 2 / 4;
+}
+
+.greeting {
+  font-size: 15px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  color: #000;
+}
+
+.user-header-text {
+  font-size: 20px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Header Buttons */
+.actions {
+  border: 1px solid #000;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  grid-template-columns: 115px 115px 115px;
+  grid-column: 2 / 3;
+}
+
+button {
+  border: 1px solid #000;
+  display: grid;
+  color: white;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  background-color: #0ea5e9;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+}
+
+/*  */
 .trending-icon svg {
   width: 35px;
   height: 35px;
@@ -89,7 +257,7 @@
 /* Projects */
 .your-projects {
   border: 1px solid #000;
-  background-color: #fff;
+  background-color:	rgb(220,220,220);
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
